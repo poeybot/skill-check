@@ -1,0 +1,20 @@
+{
+  "defaultProfile": "balanced",
+  "profiles": {
+    "strict": {
+      "severityWeights": { "critical": 100, "high": 35, "medium": 12, "low": 1 },
+      "verdictThresholds": { "rejectMinScore": 85, "cautionMinScore": 18 }
+    },
+    "balanced": {
+      "severityWeights": { "critical": 100, "high": 30, "medium": 10, "low": 1 },
+      "verdictThresholds": { "rejectMinScore": 100, "cautionMinScore": 20 }
+    },
+    "lenient": {
+      "severityWeights": { "critical": 100, "high": 24, "medium": 8, "low": 1 },
+      "verdictThresholds": { "rejectMinScore": 120, "cautionMinScore": 24 }
+    },
+    "gc": {
+      "$ref": "audit-policy.gc.json"
+    }
+  }
+}

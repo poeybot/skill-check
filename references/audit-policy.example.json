@@ -1,0 +1,44 @@
+{
+  "severityWeights": {
+    "critical": 100,
+    "high": 30,
+    "medium": 10,
+    "low": 1
+  },
+  "verdictThresholds": {
+    "rejectMinScore": 100,
+    "cautionMinScore": 20
+  },
+  "rules": {
+    "malware_pattern": { "severity": "critical" },
+    "undeclared_capability": { "severity": "high" },
+    "persistence_surface": { "severity": "high" },
+    "secret_access_surface": { "severity": "medium" },
+    "signature_catalog_context": { "severity": "medium" }
+  },
+  "overridesByCategory": {
+    "1": {
+      "rules": {
+        "undeclared_capability": { "severity": "critical" }
+      }
+    },
+    "2": {},
+    "3": {
+      "rules": {
+        "undeclared_capability": { "severity": "critical" },
+        "persistence_surface": { "severity": "critical" }
+      }
+    },
+    "4": {
+      "rules": {
+        "undeclared_capability": { "severity": "critical" },
+        "persistence_surface": { "severity": "critical" },
+        "secret_access_surface": { "severity": "high" }
+      },
+      "verdictThresholds": {
+        "rejectMinScore": 80,
+        "cautionMinScore": 15
+      }
+    }
+  }
+}

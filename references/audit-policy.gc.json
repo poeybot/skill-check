@@ -1,0 +1,58 @@
+{
+  "name": "gc-balanced-public",
+  "notes": "Balanced for real-world skill vetting: reduce noisy false positives in cat2 while strict in cat3/cat4.",
+  "severityWeights": {
+    "critical": 100,
+    "high": 28,
+    "medium": 9,
+    "low": 1
+  },
+  "verdictThresholds": {
+    "rejectMinScore": 95,
+    "cautionMinScore": 20
+  },
+  "rules": {
+    "malware_pattern": { "severity": "critical" },
+    "undeclared_capability": { "severity": "high" },
+    "persistence_surface": { "severity": "high" },
+    "archive_extraction_surface": { "severity": "high" },
+    "secret_access_surface": { "severity": "medium" },
+    "signature_catalog_context": { "severity": "medium" }
+  },
+  "overridesByCategory": {
+    "1": {
+      "rules": {
+        "undeclared_capability": { "severity": "critical" }
+      }
+    },
+    "2": {
+      "verdictThresholds": {
+        "rejectMinScore": 110,
+        "cautionMinScore": 20
+      }
+    },
+    "3": {
+      "rules": {
+        "undeclared_capability": { "severity": "critical" },
+        "persistence_surface": { "severity": "critical" },
+        "archive_extraction_surface": { "severity": "critical" }
+      },
+      "verdictThresholds": {
+        "rejectMinScore": 90,
+        "cautionMinScore": 18
+      }
+    },
+    "4": {
+      "rules": {
+        "undeclared_capability": { "severity": "critical" },
+        "persistence_surface": { "severity": "critical" },
+        "secret_access_surface": { "severity": "high" },
+        "archive_extraction_surface": { "severity": "critical" }
+      },
+      "verdictThresholds": {
+        "rejectMinScore": 80,
+        "cautionMinScore": 15
+      }
+    }
+  }
+}
