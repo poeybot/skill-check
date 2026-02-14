@@ -1,0 +1,32 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="220" y1="160" x2="920" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <circle cx="1020" cy="120" r="220" fill="#1F2937" opacity="0.35"/>
+  <circle cx="180" cy="560" r="260" fill="#0EA5E9" opacity="0.10"/>
+
+  <rect x="86" y="102" width="1108" height="436" rx="24" fill="#0F172A" stroke="#334155"/>
+
+  <text x="130" y="190" fill="#94A3B8" font-family="Inter, Segoe UI, Arial" font-size="30" font-weight="600">OpenClaw Security Skill</text>
+  <text x="130" y="265" fill="white" font-family="Inter, Segoe UI, Arial" font-size="72" font-weight="800">Skill Check</text>
+  <text x="130" y="320" fill="#E2E8F0" font-family="Inter, Segoe UI, Arial" font-size="38" font-weight="600">Ship safer skills, faster.</text>
+  <text x="130" y="385" fill="#CBD5E1" font-family="Inter, Segoe UI, Arial" font-size="28">Audit ClawHub/OpenClaw skills before install with policy-based verdicts.</text>
+
+  <rect x="130" y="435" width="760" height="64" rx="12" fill="url(#accent)" opacity="0.95"/>
+  <text x="158" y="476" fill="#020617" font-family="Inter, Segoe UI, Arial" font-size="28" font-weight="800">APPROVED • CAUTION • REJECT</text>
+
+  <g opacity="0.95">
+    <rect x="932" y="206" width="218" height="218" rx="20" fill="#111827" stroke="#475569"/>
+    <path d="M986 318l40 40 72-88" stroke="#22D3EE" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="1041" cy="315" r="86" stroke="#22D3EE" stroke-opacity="0.35" stroke-width="6"/>
+  </g>
+</svg>

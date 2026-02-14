@@ -1,6 +1,10 @@
+![Skill Check banner](assets/banner.svg)
+
 # Skill Check — Ship safer skills
 
 Security audit gate for OpenClaw/ClawHub skills before install or use.
+
+> **Tagline:** Move fast without shipping regret.
 
 `skill-check` scans third-party skills for malicious patterns, undeclared capabilities, supply-chain risk, and runtime abuse — then returns a clear verdict:
 
@@ -14,6 +18,12 @@ Most skill installs are fast. Security reviews are usually manual (or skipped).
 
 `skill-check` makes review repeatable and policy-driven so you can move quickly **without shipping regret**.
 
+## Who this is for
+
+- Builders installing 3rd-party skills from ClawHub
+- Teams running OpenClaw in production
+- Security-conscious operators who want a repeatable gate
+
 ## What it checks
 
 - static risk patterns (download+exec, obfuscation, dangerous archives, etc.)
@@ -21,6 +31,14 @@ Most skill installs are fast. Security reviews are usually manual (or skipped).
 - policy scoring by threat category (1–4)
 - optional dynamic probe for suspicious/network/system-level cases
 - pre-install scan from ClawHub slug **without installing**
+
+## Core promise
+
+Before install, you get a deterministic verdict with policy scoring:
+
+- ✅ **APPROVED** → safe to proceed
+- ⚠️ **CAUTION** → review + explicit acceptance
+- ⛔ **REJECT** → block
 
 ## Quick start
 
