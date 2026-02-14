@@ -53,6 +53,33 @@ python3 scripts/scan_hub_slug.py skill-scanner --category 2 --policy references/
 
 This downloads skill files via `clawhub inspect --file` into a temp workspace, scans, prints verdict, then cleans up.
 
+## 5.1) Enforced installer (recommended default)
+
+Use the safe installer wrapper so install is blocked unless verdict is APPROVED:
+
+```bash
+scripts/safe_install.sh <slug>
+# optional
+scripts/safe_install.sh <slug> --version 1.2.3 --category 2 --policy references/audit-policy.gc.json
+```
+
+Behavior:
+- runs `scan_hub_slug.py`
+- aborts install on CAUTION/REJECT/failure
+- proceeds with `clawhub install` only when APPROVED
+- writes audit log to `~/.openclaw/workspace/.learnings/skill-audit-*.log`
+
+## 5.2) Shell guard (auto-enforce `clawhub install`)
+
+One-time setup:
+
+```bash
+scripts/install_shell_guard.sh
+source ~/.bashrc   # or reopen shell
+```
+
+After this, `clawhub install <slug>` is intercepted and routed through `scripts/safe_install.sh`.
+
 ## 6) Decision policy
 
 - **APPROVED**: low risk, declared/minimal behavior
